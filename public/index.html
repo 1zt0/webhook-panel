@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Webhook Panel</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Webhook Panel</h1>
+      <p class="subtitle">Create endpoints • Inspect payloads • Own your webhooks</p>
+    </header>
+
+    <section class="create-section">
+      <h2>Create Endpoint</h2>
+      <div class="create-form">
+        <input type="text" id="endpointName" placeholder="e.g. GitHub, Stripe, Discord..." />
+        <button id="createBtn">Create</button>
+      </div>
+    </section>
+
+    <section class="endpoints-section">
+      <h2>Your Endpoints</h2>
+      <div id="endpointsList" class="endpoints-list">
+        <p class="empty">No endpoints yet. Create one above.</p>
+      </div>
+    </section>
+
+    <section class="logs-section">
+      <div class="logs-header">
+        <h2>Recent Requests</h2>
+        <div class="logs-actions">
+          <select id="filterEndpoint">
+            <option value="">All endpoints</option>
+          </select>
+          <button id="clearLogsBtn" class="danger">Clear Logs</button>
+        </div>
+      </div>
+      <div id="logsList" class="logs-list">
+        <p class="empty">No requests received yet.</p>
+      </div>
+    </section>
+  </div>
+
+  <!-- Modal for viewing full request -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <button class="close-btn" id="closeModal">&times;</button>
+      <h3 id="modalTitle">Request Details</h3>
+      <pre id="modalBody"></pre>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
