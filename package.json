@@ -1,0 +1,18 @@
+{
+  "name": "webhook-panel",
+  "version": "1.0.0",
+  "description": "Build your own webhook receiver with a clean control panel",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "keywords": ["webhook", "panel", "receiver", "dashboard"],
+  "author": "1zt0",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.21.0",
+    "uuid": "^10.0.0",
+    "body-parser": "^1.20.3"
+  }
+}
